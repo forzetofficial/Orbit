@@ -1,0 +1,501 @@
+.sky {
+  display: flex;
+  position: relative;
+  background: linear-gradient(to bottom, #020107 0%, #201b46 100%);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.stars {
+  z-index: 10;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow:
+    394px 313px #fff, 1668px 2206px #fff, 964px 2249px #fff,
+    2416px 1313px #fff, 1898px 1051px #fff, 240px 1681px #fff,
+    1948px 1954px #fff, 432px 643px #fff, 1427px 1485px #fff, 1230px 1047px #fff;
+  animation: animStar 100s linear infinite;
+}
+
+.stars:after {
+  content: " ";
+  top: -600px;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  position: absolute;
+  background: transparent;
+  box-shadow: 1948px 2163px #fff, 2526px 334px #fff, 209px 1409px #fff, 1167px 710px #fff, 919px 2468px #fff, 939px
+    2346px #fff, 765px 2490px #fff;
+}
+
+.stars1 {
+  z-index: 10;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 674px 1824px #fff, 404px 1938px #fff, 1890px 1965px #fff, 1070px 542px #fff, 2374px 2014px #fff, 796px
+    2452px #fff, 2512px 1861px #fff;
+  animation: animStar 125s linear infinite;
+}
+
+.stars1:after {
+  content: " ";
+  top: -600px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  position: absolute;
+  background: transparent;
+  box-shadow: 264px 626px #fff, 1327px 73px #fff, 222px 692px #fff, 1476px 1519px #fff, 197px 2436px #fff, 1854px 873px
+    #fff, 1531px 2436px #fff;
+}
+
+.stars2 {
+  z-index: 10;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 764px 1429px #fff, 1984px 2006px #fff, 1527px 174px #fff, 306px 1079px #fff, 2319px 1993px #fff, 795px
+    1183px #fff, 1917px 1663px #fff;
+  animation: animStar 175s linear infinite;
+}
+
+.stars2:after {
+  content: " ";
+  top: -600px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  position: absolute;
+  background: transparent;
+  box-shadow: 1568px 980px #fff, 152px 135px #fff, 2554px 480px #fff, 284px 680px #fff, 2377px 512px #fff, 192px 924px
+    #fff, 1707px 130px #fff;
+}
+
+.shootingstars {
+  z-index: 10;
+  width: 5px;
+  height: 85px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), white);
+  animation: animShootingStar 10s linear infinite;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2560px) translateX(-2560px);
+  }
+}
+@keyframes animShootingStar {
+  from {
+    transform: translateY(0px) translateX(0px) rotate(-45deg);
+    opacity: 1;
+    height: 5px;
+  }
+  to {
+    transform: translateY(-2560px) translateX(-2560px) rotate(-45deg);
+    opacity: 1;
+    height: 800px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.auth {
+  display: flex;
+  background-color: #201b46;
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  min-height: 600px;
+  margin: auto;
+  margin-top: 7%;
+  border-radius: 30px;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 0.5s forwards;
+  z-index: 11;
+  padding-bottom: 20px;
+}
+
+.Headbox {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -5%;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 1s forwards;
+  z-index: 11;
+  padding: 0 15px;
+}
+
+.Loginbox,
+.Passwordbox,
+.Button {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 1.5s forwards;
+}
+
+.Logintext,
+.Passwordtext,
+.RevPasswordtext {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 1.5s forwards;
+  color: white;
+  margin-left: 13%;
+  margin-top: 45px;
+  margin-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+}
+
+.buttonAuth,
+.buttonReg {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 2s forwards;
+}
+
+.HEAD {
+  text-align: center;
+  margin-top: 12%;
+  font-size: 25px;
+  font-family: "Dela Gothic One", sans-serif;
+  color: white;
+}
+
+.Loginbox {
+  background-color: white;
+  width: 375px;
+  height: 45px;
+  border-radius: 20px;
+  margin-left: 13%;
+}
+
+.Logintext {
+  margin-left: 13%;
+  color: white;
+  margin-top: 45px;
+  margin-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+}
+
+.Passwordbox {
+  background-color: white;
+  width: 375px;
+  height: 45px;
+  border-radius: 20px;
+  margin-left: 13%;
+}
+
+.Passwordtext {
+  color: white;
+  margin-left: 13%;
+  margin-top: 45px;
+  margin-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+}
+
+.RevPasswordtext {
+  color: white;
+  margin-left: 13%;
+  margin-top: 30px;
+  margin-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+}
+
+.Button {
+  display: flex;
+  width: 100%;
+  max-width: 320px;
+  height: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7%;
+  z-index: 11;
+}
+
+.buttonAuth {
+  background-color: #590d82;
+  border-radius: 365px;
+  border-style: none;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: medium;
+  font-weight: bolder;
+  font-size: 14px;
+  z-index: 11;
+  cursor: pointer;
+}
+
+.buttonAuth:hover {
+  background-color: #590dae;
+}
+
+.buttonAuth:active {
+  background-color: #590dde;
+}
+
+.buttonReg {
+  background-color: #b61aae;
+  border-radius: 365px;
+  border-style: none;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: bolder;
+  z-index: 11;
+  cursor: pointer;
+}
+
+.buttonReg:hover {
+  background-color: #b61abc;
+}
+
+.buttonReg:active {
+  background-color: #b61ade;
+}
+
+.open-modal-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.open-modal-button:hover {
+  background-color: #0056b3;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* РЎРєСЂС‹РІР°РµРј РјРѕРґР°Р»СЊРЅРѕРµ РѕРєРЅРѕ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ */
+  visibility: hidden; /* РќРµ РїРѕР·РІРѕР»СЏРµС‚ РєР»РёРєР°Рј РїСЂРѕС…РѕРґРёС‚СЊ С‡РµСЂРµР· РЅРµРіРѕ */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* РђРЅРёРјР°С†РёСЏ */
+}
+
+.modal.open {
+  opacity: 1; /* РџРѕРєР°Р·С‹РІР°РµРј РјРѕРґР°Р»СЊРЅРѕРµ РѕРєРЅРѕ */
+  visibility: visible; /* РџРѕР·РІРѕР»СЏРµС‚ РєР»РёРєР°Рј РїСЂРѕС…РѕРґРёС‚СЊ С‡РµСЂРµР· РЅРµРіРѕ */
+}
+
+.modal-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 300px; /* РЁРёСЂРёРЅР° РјРѕРґР°Р»СЊРЅРѕРіРѕ РѕРєРЅР° */
+}
+
+.modal-content h2 {
+  margin-top: 0;
+}
+
+input[type="email"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  opacity: 1;
+}
+
+button[type="submit"] {
+  background-color: #28a745;
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+button[type="button1"] {
+  background-color: #dc3545;
+  color: white;
+}
+
+button[type="button1"]:hover {
+  background-color: #c82333;
+}
+
+.errormessage {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(162, 0, 255, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  animation: fadeInOut 3s forwards;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* Modal styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 300px;
+  text-align: center;
+}
+
+.modalInput {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.modalSubmitButton,
+.modalCloseButton {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  flex: 1;
+}
+
+.modalSubmitButton {
+  background-color: #28a745;
+  color: white;
+}
+
+.modalCloseButton {
+  background-color: #dc3545;
+  color: white;
+}
+
+.modalError {
+  color: red;
+  margin-top: 10px;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .auth {
+    width: 95%;
+    margin-top: 10%;
+  }
+
+  .HEAD {
+    font-size: 20px;
+  }
+
+  .inputField {
+    width: 85%;
+    font-size: 14px;
+  }
+
+  .Button {
+    width: 90%;
+  }
+
+  .buttonAuth,
+  .buttonReg {
+    font-size: 12px;
+  }
+
+  .Logintext,
+  .Passwordtext {
+    margin-left: 8%;
+  }
+}
+
+.inputField {
+  width: 75%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  margin: 0 auto;
+  display: block;
+  border: none;
+}

@@ -1,0 +1,302 @@
+.sky {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: linear-gradient(to bottom, #020107 0%, #201b46 100%);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.stars {
+  z-index: 10;
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow:
+    394px 313px #fff, 1668px 2206px #fff, 964px 2249px #fff,
+    2416px 1313px #fff, 1898px 1051px #fff, 240px 1681px #fff,
+    1948px 1954px #fff, 432px 643px #fff, 1427px 1485px #fff, 1230px 1047px #fff;
+  animation: animStar 100s linear infinite;
+}
+
+.stars:after {
+  content: " ";
+  top: -600px;
+  width: 1px;
+  height: 1px;
+  border-radius: 50%;
+  position: absolute;
+  background: transparent;
+  box-shadow: 1948px 2163px #fff, 2526px 334px #fff, 209px 1409px #fff, 1167px 710px #fff, 919px 2468px #fff, 939px
+    2346px #fff, 765px 2490px #fff;
+}
+
+.stars1 {
+  z-index: 10;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 674px 1824px #fff, 404px 1938px #fff, 1890px 1965px #fff, 1070px 542px #fff, 2374px 2014px #fff, 796px
+    2452px #fff, 2512px 1861px #fff;
+  animation: animStar 125s linear infinite;
+}
+
+.stars1:after {
+  content: " ";
+  top: -600px;
+  width: 2px;
+  height: 2px;
+  border-radius: 50%;
+  position: absolute;
+  background: transparent;
+  box-shadow: 264px 626px #fff, 1327px 73px #fff, 222px 692px #fff, 1476px 1519px #fff, 197px 2436px #fff, 1854px 873px
+    #fff, 1531px 2436px #fff;
+}
+
+.stars2 {
+  z-index: 10;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: 764px 1429px #fff, 1984px 2006px #fff, 1527px 174px #fff, 306px 1079px #fff, 2319px 1993px #fff, 795px
+    1183px #fff, 1917px 1663px #fff;
+  animation: animStar 175s linear infinite;
+}
+
+.stars2:after {
+  content: " ";
+  top: -600px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  position: absolute;
+  background: transparent;
+  box-shadow: 1568px 980px #fff, 152px 135px #fff, 2554px 480px #fff, 284px 680px #fff, 2377px 512px #fff, 192px 924px
+    #fff, 1707px 130px #fff;
+}
+
+.shootingstars {
+  z-index: 10;
+  width: 5px;
+  height: 85px;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), white);
+  animation: animShootingStar 10s linear infinite;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-2560px) translateX(-2560px);
+  }
+}
+
+@keyframes animShootingStar {
+  from {
+    transform: translateY(0px) translateX(0px) rotate(-45deg);
+    opacity: 1;
+    height: 5px;
+  }
+  to {
+    transform: translateY(-2560px) translateX(-2560px) rotate(-45deg);
+    opacity: 1;
+    height: 800px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.indiv {
+  display: flex;
+  background-color: #201b46;
+  width: 90%;
+  max-width: 500px;
+  height: auto;
+  min-height: 650px;
+  margin: auto;
+  margin-top: 7%;
+  border-radius: 30px;
+  z-index: 10;
+  padding-bottom: 20px;
+}
+
+.Headbox {
+  width: 100%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+.HEAD {
+  text-align: center;
+  margin-top: 12%;
+  font-size: 25px;
+  font-family: "Dela Gothic One", sans-serif;
+  color: white;
+}
+
+.Logintext1,
+.Etext,
+.Passwordtext1,
+.Passwordtext11 {
+  margin-left: 13%;
+  color: white;
+  margin-bottom: 7px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  font-style: normal;
+}
+
+.Logintext1 {
+  margin-top: 60px;
+}
+
+.Etext,
+.Passwordtext1,
+.Passwordtext11 {
+  margin-top: 15px;
+}
+
+.inputField {
+  width: 75%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 16px;
+  margin: 0 auto;
+  display: block;
+  border: none;
+}
+
+.Button {
+  display: flex;
+  width: 100%;
+  max-width: 320px;
+  height: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 7%;
+}
+
+.buttonrev {
+  background-color: #b61aae;
+  border-radius: 365px;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: bolder;
+  border-style: none;
+  cursor: pointer;
+}
+
+.buttonrev:hover {
+  background-color: #b61abc;
+}
+
+.buttonrev:active {
+  background-color: #b61ade;
+}
+
+.Loginbox1,
+.Passwordbox1,
+.Passwordbox12,
+.Button {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 1.5s forwards;
+}
+
+.Logintext1,
+.Passwordtext1,
+.Passwordtext12 {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 1.5s forwards;
+}
+
+.buttonrev,
+.indiv,
+.Headbox,
+.HEAD {
+  opacity: 0;
+  animation: fadeIn 0.7s ease-in-out 1s forwards;
+}
+
+.errormessage {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(162, 0, 255, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000;
+  animation: fadeInOut 3s forwards;
+  width: 80%;
+  max-width: 300px;
+  text-align: center;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .indiv {
+    width: 95%;
+    margin-top: 10%;
+  }
+
+  .HEAD {
+    font-size: 20px;
+  }
+
+  .inputField {
+    width: 85%;
+    font-size: 14px;
+  }
+
+  .Button {
+    width: 90%;
+  }
+
+  .buttonrev {
+    font-size: 12px;
+  }
+
+  .Logintext1,
+  .Etext,
+  .Passwordtext1,
+  .Passwordtext11 {
+    margin-left: 8%;
+  }
+}

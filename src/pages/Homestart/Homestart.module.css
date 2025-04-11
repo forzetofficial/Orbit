@@ -1,0 +1,491 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Container */
+.container {
+  background: radial-gradient(ellipse at bottom, #0d1d31 0%, #0c0d13 100%);
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Stars animation */
+.starsContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: twinkle 4s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+/* Generate random positions for stars */
+.star:nth-child(1) {
+  top: 10%;
+  left: 20%;
+  animation-delay: 0.1s;
+}
+.star:nth-child(2) {
+  top: 15%;
+  left: 30%;
+  animation-delay: 0.2s;
+}
+.star:nth-child(3) {
+  top: 25%;
+  left: 15%;
+  animation-delay: 0.3s;
+}
+.star:nth-child(4) {
+  top: 35%;
+  left: 40%;
+  animation-delay: 0.4s;
+}
+.star:nth-child(5) {
+  top: 45%;
+  left: 25%;
+  animation-delay: 0.5s;
+}
+.star:nth-child(6) {
+  top: 55%;
+  left: 35%;
+  animation-delay: 0.6s;
+}
+.star:nth-child(7) {
+  top: 65%;
+  left: 45%;
+  animation-delay: 0.7s;
+}
+.star:nth-child(8) {
+  top: 75%;
+  left: 55%;
+  animation-delay: 0.8s;
+}
+.star:nth-child(9) {
+  top: 85%;
+  left: 65%;
+  animation-delay: 0.9s;
+}
+.star:nth-child(10) {
+  top: 5%;
+  left: 75%;
+  animation-delay: 1s;
+}
+.star:nth-child(11) {
+  top: 15%;
+  left: 85%;
+  animation-delay: 1.1s;
+}
+.star:nth-child(12) {
+  top: 25%;
+  left: 95%;
+  animation-delay: 1.2s;
+}
+.star:nth-child(13) {
+  top: 35%;
+  left: 5%;
+  animation-delay: 1.3s;
+}
+.star:nth-child(14) {
+  top: 45%;
+  left: 15%;
+  animation-delay: 1.4s;
+}
+.star:nth-child(15) {
+  top: 55%;
+  left: 25%;
+  animation-delay: 1.5s;
+}
+.star:nth-child(16) {
+  top: 65%;
+  left: 35%;
+  animation-delay: 1.6s;
+}
+.star:nth-child(17) {
+  top: 75%;
+  left: 45%;
+  animation-delay: 1.7s;
+}
+.star:nth-child(18) {
+  top: 85%;
+  left: 55%;
+  animation-delay: 1.8s;
+}
+.star:nth-child(19) {
+  top: 95%;
+  left: 65%;
+  animation-delay: 1.9s;
+}
+.star:nth-child(20) {
+  top: 5%;
+  left: 75%;
+  animation-delay: 2s;
+}
+/* Add more random positions for other stars */
+
+/* Header and Navigation */
+.header {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.navButton {
+  color: white !important;
+  font-size: 14px !important;
+  transition: transform 0.3s, color 0.3s !important;
+}
+
+.navButton:hover {
+  transform: translateY(-2px);
+  color: #eeab81 !important;
+}
+
+.separator {
+  color: white;
+  user-select: none;
+}
+
+/* Main Content */
+.mainContent {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* Text Section */
+.textSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 20px;
+  color: white;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.orbitaText {
+  font-size: 55px;
+  line-height: 1;
+}
+
+.uspekhaText {
+  font-size: 100px;
+  line-height: 1;
+  margin-top: -20px;
+}
+
+.subtitle {
+  font-size: 23px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.descriptionContainer {
+  display: flex;
+  margin: 30px 0;
+  max-width: 500px;
+}
+
+.verticalLine {
+  width: 2px;
+  min-height: 80px;
+  background-color: white;
+  margin-right: 20px;
+}
+
+.description {
+  font-family: "Murecho", sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.ctaButton {
+  background-color: #eeab81;
+  color: black;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 310px;
+  height: 60px;
+  margin-top: 20px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  font-family: "Murecho", sans-serif;
+}
+
+.ctaButton:hover {
+  background-color: #9b7157;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ctaButton:active {
+  background-color: #815e47;
+  transform: scale(0.95);
+}
+
+/* Image Section */
+.imageSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 15px;
+  max-width: 800px;
+}
+
+.gridImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  opacity: 0.9;
+  transition: transform 0.3s, opacity 0.3s;
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.gridImage:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 0.9;
+    transform: translateY(0);
+  }
+}
+
+.quote {
+  font-family: "Murecho", sans-serif;
+  font-style: italic;
+  color: white;
+  text-align: center;
+  max-width: 400px;
+  margin-top: 20px;
+  animation: fadeIn 2s ease forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+/* Mobile Styles */
+/* Media Queries for Responsive Design */
+@media (max-width: 1024px) {
+  .orbitaText {
+    font-size: 45px;
+  }
+
+  .uspekhaText {
+    font-size: 80px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .imageGrid {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContent {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .textSection {
+    align-items: center;
+    text-align: center;
+  }
+
+  .descriptionContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .verticalLine {
+    width: 1px;
+    height: 1px;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    text-align: center;
+  }
+
+  .imageSection {
+    margin-top: 20px;
+  }
+
+  .imageGrid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 400px;
+  }
+
+  .square {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .back {
+    position: fixed;
+    top: -50%;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    transform: rotate(-45deg);
+  }
+
+  .Heading {
+    justify-content: center;
+  }
+
+  hr {
+    height: 80px;
+  }
+
+  .Inbox ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 800px){
+  .verticalLine{
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .verticalLine{
+    display: none;
+  }
+
+  .nav {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .orbitaText {
+    font-size: 36px;
+  }
+
+  .uspekhaText {
+    font-size: 60px;
+    margin-top: -10px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+
+  .ctaButton {
+    width: 100%;
+    max-width: 280px;
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .imageGrid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+  }
+
+  .quote {
+    font-size: 14px;
+    max-width: 300px;
+  }
+  .mobileOrb {
+    font-size: 32px;
+  }
+
+  .mobileYsp {
+    font-size: 56px;
+    margin-top: -20px;
+  }
+
+  .mobileN {
+    font-size: 16px;
+  }
+
+  .mobileButtonAu {
+    width: 90%;
+    height: 45px;
+    font-size: 14px;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .list {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+}

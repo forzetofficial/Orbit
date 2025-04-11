@@ -1,0 +1,87 @@
+.codeEditor {
+  background-color: var(--card-background);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  margin: 1rem 0;
+}
+
+.task {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  background-color: rgba(20, 27, 45, 0.5);
+}
+
+.task h3 {
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+}
+
+.task p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.controls {
+  padding: 1rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  gap: 1rem;
+  background-color: rgba(20, 27, 45, 0.5);
+}
+
+.error {
+  padding: 1rem;
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.errorIcon {
+  font-size: 1.1rem;
+}
+
+.testResults {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  background-color: rgba(20, 27, 45, 0.5);
+}
+
+.testResults h4 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.testResult {
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.testResult:last-child {
+  margin-bottom: 0;
+}
+
+.resultIcon {
+  font-size: 1rem;
+}
+
+.passed {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: #4caf50;
+}
+
+.failed {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: #f44336;
+}

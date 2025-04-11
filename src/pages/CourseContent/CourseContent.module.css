@@ -1,0 +1,288 @@
+.courseContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  margin-bottom: 0.5rem;
+  padding: 0;
+}
+
+.backButton:hover {
+  color: var(--primary-color);
+}
+
+.courseHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.courseHeader h1 {
+  font-size: 2rem;
+  color: var(--text-primary);
+}
+
+.progressContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.progressBarContainer {
+  width: 100%;
+  height: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  border-radius: 4px;
+  transition: width 1s ease;
+}
+
+.courseLayout {
+  display: flex;
+  gap: 2rem;
+  height: calc(100vh - 250px);
+  min-height: 500px;
+}
+
+.courseSidebar {
+  width: 350px;
+  background-color: var(--card-background);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.moduleCard {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.moduleCard:last-child {
+  border-bottom: none;
+}
+
+.moduleTitle {
+  padding: 1rem;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  background-color: rgba(20, 27, 45, 0.5);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.lessonsList {
+  list-style: none;
+}
+
+.lessonItem {
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid rgba(42, 51, 73, 0.5);
+}
+
+.lessonItem:last-child {
+  border-bottom: none;
+}
+
+.lessonItem:hover {
+  background-color: rgba(108, 99, 255, 0.05);
+}
+
+.lessonItem.active {
+  background-color: rgba(108, 99, 255, 0.1);
+  border-left: 3px solid var(--primary-color);
+}
+
+.lessonItem.completed .lessonIcon {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--success-color);
+}
+
+.lessonItem.locked {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.lessonInfo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lessonIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: rgba(108, 99, 255, 0.1);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.lessonDetails {
+  flex: 1;
+}
+
+.lessonTitle {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.lessonMeta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.lessonType {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.lessonContent {
+  flex: 1;
+  background-color: var(--card-background);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.lessonContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.lessonHeader {
+  padding: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lessonHeader h2 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+}
+
+.lessonBadge {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.lessonBody {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+}
+
+.placeholderContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.placeholderIcon {
+  font-size: 3rem;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(108, 99, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholderDescription {
+  max-width: 500px;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.lessonFooter {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.noLessonSelected {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: var(--text-secondary);
+  text-align: center;
+  padding: 2rem;
+}
+
+.notFound {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--card-background);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+}
+
+.notFound h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .courseLayout {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .courseSidebar {
+    width: 100%;
+    max-height: 300px;
+  }
+  
+  .lessonContent {
+    min-height: 400px;
+  }
+}
