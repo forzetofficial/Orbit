@@ -24,7 +24,7 @@ function App() {
           <Route path="/home" element={<Homestart />} />
           <Route path="/auth" element={<AuthPage />} />
           <Route path="/registration" element={<RegistrationPage />} />
-          <Route path="/" element={isAuthenticated ? <Layout /> : <Navigate to="/auth" />}>
+          <Route path="/" element={true ? <Layout /> : <Navigate to="/auth" />}>
             <Route index element={<HomePage />} />
             <Route path="catalog" element={<CourseCatalog />} />
             <Route path="catalog/:courseId" element={<CourseDetails />} />

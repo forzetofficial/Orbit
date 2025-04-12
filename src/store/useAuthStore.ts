@@ -36,18 +36,19 @@ export const useAuthStore = create<AuthState>((set) => ({
     }
   },
 
-  signUp: async (email, password, name, navigate) => {
+  signUp: async (email, password, username, navigate) => {
     try {
       const response = await axios.post('https://cookhub.space/api/v1/auth/register', {
         email,
         password,
-        name,
+        username,
       });
 
       if (response.status === 200) {
         navigate('/auth');
       }
     } catch (error) {
+      console.log(error);
       set({ error: true });
       setTimeout(() => set({ error: false }), 3000);
     }
